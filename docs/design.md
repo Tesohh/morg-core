@@ -5,6 +5,7 @@
 - Bring Your Own Editor: use any regular text editor for editing your notes, organize however you like
 - Reminders using a custom format
 - When a note file changes on server disk, parse reminders
+- segragated, configurable MCP (decide where the agent can read/write)
 
 ## Reminder/event syntax
 ```md
