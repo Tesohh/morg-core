@@ -1,3 +1,3 @@
 # goon
 
-Lightweight notes
+Very sloppy
