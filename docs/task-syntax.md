@@ -1,22 +1,4 @@
 # tasks
-<!-- - Tasks always satisfy pattern `/$- [.]/` or `/$#+ [.]/` -->
-<!-- - The task parser should find all lines that start with the pattern  -->
-<!-- - Tasks span across the entire line -->
-<!-- - By default `[ ]` are todo, `[x]` are done <!-- [E] for events? --> -->
-<!--     - Users are able to add custom statuses in their config, eg. a `[-]` for "in progress" -->
-<!-- - modifiers add data to the task -->
-<!-- ## the `@repeat` modifier -->
-<!-- - Automatically repeat tasks, starting from the `@at` time -->
-<!--     - Does nothing if no `@at` modifier is present. -->
-<!-- - Use `+` -->
-<!-- - Units can be: `h`, `d`, `w`, `m`, `y` -->
-<!-- ```markdown -->
-<!-- <!-- go at 12:00 every week, 3 times starting from 22/11/2026 --> -->
-<!-- <!-- 22/11/2026, 29/11/2026, 6/12/2026 --> -->
-<!-- - [ ] go to the doctor @at(2026-11-22 12:00) @repeat(+7d 3x) -->
-<!-- ``` -->
-
-
 ## Example
 This example is a self describing showcase of the syntax
 
@@ -37,6 +19,9 @@ This is a checklist. The neovim plugin will track completion as virtual text aft
 - [x] Do this
 - [ ] Do that
 
+## TODO do this thing many times
+> scheduled: <2026-11-22 Sun 12:00 +1w>
+
 ## DOING do something else
 This is another task, i'm working on this
 
@@ -51,3 +36,41 @@ Also that note property is invalid, it would have been valid if it was: `> note:
 
 By the way, the `+tag` is not read, as tags can only be at the end of the heading (meaning `+task` is read)
 ```
+## timestamps
+```
+<YYYY-MM-DD Day HH:MM REPEATER WARNING>
+```
+- `Day` is optional and has no effect on the timestamp. It is only to help the reader quickly read the timestamps
+
+### Repeater
+```
+([+\.]?\+)\d+[hdwmy]
+<prefix><number><unit>
+```
+- prefix is one of:
+    - `+`: add interval to the original date
+    - `++`: same as `+` but skip missed repeats (move to next date after today)
+    - `.+`: add interval to the DONE date
+- unit is one of: `h`, `d`, `w`, `m`, `y`
+### Warning
+```
+-\d+[hdwmy]
+-<number><unit>
+```
+# old stuff
+<!-- - Tasks always satisfy pattern `/$- [.]/` or `/$#+ [.]/` -->
+<!-- - The task parser should find all lines that start with the pattern  -->
+<!-- - Tasks span across the entire line -->
+<!-- - By default `[ ]` are todo, `[x]` are done <!-- [E] for events? --> -->
+<!--     - Users are able to add custom statuses in their config, eg. a `[-]` for "in progress" -->
+<!-- - modifiers add data to the task -->
+<!-- ## the `@repeat` modifier -->
+<!-- - Automatically repeat tasks, starting from the `@at` time -->
+<!--     - Does nothing if no `@at` modifier is present. -->
+<!-- - Use `+` -->
+<!-- - Units can be: `h`, `d`, `w`, `m`, `y` -->
+<!-- ```markdown -->
+<!-- <!-- go at 12:00 every week, 3 times starting from 22/11/2026 --> -->
+<!-- <!-- 22/11/2026, 29/11/2026, 6/12/2026 --> -->
+<!-- - [ ] go to the doctor @at(2026-11-22 12:00) @repeat(+7d 3x) -->
+<!-- ``` -->
