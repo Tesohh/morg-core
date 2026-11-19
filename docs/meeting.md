@@ -26,8 +26,3 @@
     - more...
 - Anything that isn't in LSP standard: custom LSP methods
 - Anything that needs custom editor implementation: neovim plugin
-
-
-
-
-
