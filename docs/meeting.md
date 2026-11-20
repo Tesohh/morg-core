@@ -26,3 +26,8 @@
     - more...
 - Anything that isn't in LSP standard: custom LSP methods
 - Anything that needs custom editor implementation: neovim plugin
+## parser (tesohh)
+- choose between:
+    - build a Transformer on top of `goldmark` (more reliable, less "fun", more dependency baggage)
+    - build a custom parser (more code, less reliable, lighter, no deps)
+- we don't need to parse ALL markdown, just the parts that we need, and put the rest in generic `Text` nodes
