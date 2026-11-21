@@ -4,8 +4,8 @@ This example is a self describing showcase of the syntax
 
 ```markdown
 # TODO do this and that +tag +tag2
-> scheduled: <2026-11-22 Sun 12:00> deadline: <2026-11-22 13:00>
-> id: 123456 effort: 1h30m key: value longerkey: "longer value"
+> scheduled: <2026-11-22 Sun 12:00> deadline: <2026-11-22 13:00> 
+> effort: 1h30m key: value longerkey: "longer value"
 
 > This quote block is not part of the properties block as it is not directly below the heading
 
