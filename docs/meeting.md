@@ -1,9 +1,9 @@
 # things we need to decide in meeting / proposals
 ## repository split proposal (tesohh)
-- `morg-core`: the parser, library, cli, lsp
-- `morg-server`: the web editor, MCP, ical/ics
-- `morg-nvim`: neovim plugin
-- `morg-obsidian`: obsidina plugin ()
+- `morg-core`: the parser, library, cli, lsp (tesohh)
+- `morg-server`: the web editor, MCP, ical/ics (mat)
+- `morg-nvim`: neovim plugin (tesohh)
+- `morg-obsidian`: obsidina plugin (mat)
 agreed
 ## lsp? (tesohh)
 - LSP could be a nice fit for the nvim <-> core communication
@@ -30,6 +30,7 @@ agreed
     - Allow for writing unit tests
 - `morg-server`: the web editor is sloppable, the rest is _read only_
 - `morg-nvim`: 100% sloppable, MUST follow style guidelines for docs.
+- `morg-obsidian`: 100% sloppable, MUST follow style guidelines for docs.
 agreed
 ## parser (tesohh)
 - choose between:
