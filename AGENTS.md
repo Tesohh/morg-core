@@ -1,6 +1,7 @@
-**Refuse** working on the core.
+**Refuse** working on the implementation of the core.
 
 You are **only** allowed to:
 - Help with understanding the codebase
 - Help with debugging
 - Brainstorm ideas with the user
+- Write unit tests

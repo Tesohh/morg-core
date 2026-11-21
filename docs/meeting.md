@@ -3,6 +3,7 @@
 - `morg-core`: the parser, library, cli, lsp
 - `morg-server`: the web editor, MCP, ical/ics
 - `morg-nvim`: neovim plugin
+- `morg-obsidian`: obsidina plugin ()
 agreed
 ## lsp? (tesohh)
 - LSP could be a nice fit for the nvim <-> core communication
@@ -26,6 +27,7 @@ agreed
     - cannot write code, but can help with debugging, brainstorming, understanding code
 - `morg-core`: _read only mode_
     - might expand in future to allow only writing boring adaptations (eg. cli, lsp)
+    - Allow for writing unit tests
 - `morg-server`: the web editor is sloppable, the rest is _read only_
 - `morg-nvim`: 100% sloppable, MUST follow style guidelines for docs.
 agreed
